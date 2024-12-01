@@ -24,7 +24,7 @@ class Mercury(commands.Cog):
         await ctx.send(f"## How To Recruit: https://www.nationstates.net/page=dispatch/id=2579818\n## Where to Recruit -> https://discord.com/channels/1312834845797515416/1312856185795252295\n### [Starlight Recruitment Template](https://www.nationstates.net/page=dispatch/id=2579819)")
 
     @commands.hybrid_command()
-    async def say(self, ctx, *, message=None):
+    async def saymessage(self, ctx, *, message=None):
         embed = discord.Embed(
             title=f"{ctx.author.name} says:",
             description=f"{message}",
