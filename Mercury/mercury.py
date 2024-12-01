@@ -59,6 +59,9 @@ class Mercury(commands.Cog):
     async def hyperwarden(self, ctx):
         await ctx.reply("<:hyperwarden:1306555771898560594>")
 
+    @commands.hybrid_command()
+    async def shibaheart(self, ctx):
+        await ctx.reply("<:shibaheart:1312859566051954830>")
 
     @commands.hybrid_command()
     async def message(self, ctx, user: discord.Member, *, message=None):
