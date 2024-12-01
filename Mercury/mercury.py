@@ -32,11 +32,11 @@ class Mercury(commands.Cog):
         await ctx.reply(embed=embed)
 
     @commands.hybrid_command()
-    async def addrecruiter(self, ctx, user: discord.Member, role: discord.Role):
-        if ctx.message.author.id == 691583562608148501 or ctx.author.guild_permissions.manage_roles:
-            if role.id == 1301383500678692935:
+    async def addrole(ctx, role: discord.Role, user: discord.Member):
+        if discord.app_commands.checks.has_role(1312839827355603055):
+            if role.id == 1312836473090867230 or role.id == 1312835943375568957 or role.id == 1312835818347429888:
                 await user.add_roles(role)
-                await ctx.reply(f"Successfully added the Recruiter role")
+                await ctx.reply(f"Successfully added the role")
             else:
                 await ctx.reply(f"hey you dont have permission to add this role >:(")
         else:
