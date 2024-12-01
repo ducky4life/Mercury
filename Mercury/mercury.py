@@ -21,7 +21,7 @@ class Mercury(commands.Cog):
 
     @commands.hybrid_command()
     async def recruitment(self, ctx):
-        await ctx.send(f"## How To Recruit: https://www.nationstates.net/page=dispatch/id=2579818\n## Where to Recruit -> https://discord.com/channels/1299450621044330616/1306695718869930054")
+        await ctx.send(f"## How To Recruit: https://www.nationstates.net/page=dispatch/id=2579818\n## Where to Recruit -> https://discord.com/channels/1312834845797515416/1312856185795252295")
 
     @commands.hybrid_command()
     async def say(self, ctx, *, message=None):
