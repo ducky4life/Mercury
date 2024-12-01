@@ -32,17 +32,6 @@ class Mercury(commands.Cog):
         await ctx.reply(embed=embed)
 
     @commands.hybrid_command()
-    async def addrole(ctx, role: discord.Role, user: discord.Member):
-        if discord.app_commands.checks.has_role(1312839827355603055):
-            if role.id == 1312836473090867230 or role.id == 1312835943375568957 or role.id == 1312835818347429888:
-                await user.add_roles(role)
-                await ctx.reply(f"Successfully added the role")
-            else:
-                await ctx.reply(f"hey you dont have permission to add this role >:(")
-        else:
-            await ctx.reply(f"hey you dont have permission to use this command >:(")
-
-    @commands.hybrid_command()
     async def areducksgood(self, ctx):
         await ctx.reply("Yes!!")
 
