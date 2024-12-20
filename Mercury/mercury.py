@@ -99,6 +99,6 @@ class Mercury(commands.Cog):
         if match:
             await channel.send(">:(")
 
-        match = re.search(r".*(\.here).*", message.content, re.IGNORECASE)
+        match = re.search(r".*( \.here).*", message.content, re.IGNORECASE)
         if match:
             await channel.send(".kickban")
