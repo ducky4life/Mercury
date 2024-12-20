@@ -1,8 +1,12 @@
-import discord
 from discord.ext import commands
 import asyncio
 import os
 from redbot.core import commands
+import random
+import re
+from typing import Match
+import discord
+from discord import Message
 
 
 class Mercury(commands.Cog):
@@ -69,9 +73,32 @@ class Mercury(commands.Cog):
             f"{message}\nSent by {ctx.author.name}, replying will not do anything, this is automated."
         )
 
-
     @commands.hybrid_command()
     async def slowmode(self, ctx, seconds: int):
         if ctx.author.guild_permissions.manage_messages:
             await ctx.channel.edit(slowmode_delay=seconds)
             await ctx.send(f"Set the slowmode delay in this channel to {seconds} seconds!")
+
+    @commands.Cog.listener()
+    async def on_message(self, message: discord.Message) -> None:
+        channel = message.channel
+
+        author = message.author
+        valid_user = isinstance(author, discord.Member) and not author.bot
+        if not valid_user:
+            return
+
+        if await self.bot.is_automod_immune(message):
+            return
+
+        match = re.search(r".*whats a region.*", message.content, re.IGNORECASE)
+        if match:
+            await channel.send(">:(")
+
+        match = re.search(r".*what's a region.*", message.content, re.IGNORECASE)
+        if match:
+            await channel.send(">:(")
+
+        match = re.search(".here", message.content, re.IGNORECASE)
+        if match:
+            await channel.send(".kickban")
