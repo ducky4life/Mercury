@@ -109,4 +109,4 @@ class Mercury(commands.Cog):
 
         match = re.search("nerd", message.content, re.IGNORECASE)
         if match:
-            await channel.send("no")
+            await channel.send("not nerd")
