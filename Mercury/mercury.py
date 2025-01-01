@@ -80,10 +80,11 @@ class Mercury(commands.Cog):
     @commands.hybrid_command()
     async def getpoolnoodled(self, ctx, user: discord.Member):
         embed = discord.Embed(
-            title=f"@{ctx.author.name} pool noodles @{user}!",
+            title=f"@{ctx.author.name}#0000 pool noodles @{user}#0000!",
             description=f"GET POOL NOODLED <:poolnoodle:1323901818589282377> <:poolnoodle:1323901818589282377> <:poolnoodle:1323901818589282377>",
         )
         await ctx.reply(embed=embed)
+            await ctx.add_reaction("<:poolnoodle:1323901818589282377>")
 
     @commands.hybrid_command()
     async def slowmode(self, ctx, seconds: int):
