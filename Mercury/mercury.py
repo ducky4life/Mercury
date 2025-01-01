@@ -115,6 +115,8 @@ class Mercury(commands.Cog):
         if match:
             await channel.send("weeb")
 
-        match = re.search("pool noodle", message.content, re.IGNORECASE)
+        match = re.search(r".*pool noodle.*", message.content, re.IGNORECASE)
         if match:
             await message.add_reaction("<:poolnoodle:1323901818589282377>")
+            await channel.send("get pool noodled")
+
