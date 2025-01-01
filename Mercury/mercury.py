@@ -78,7 +78,7 @@ class Mercury(commands.Cog):
         )
 
     @commands.hybrid_command()
-    async def getpoolnoodled(self, ctx, user: discord.Member, *):
+    async def getpoolnoodled(self, ctx, user: discord.Member):
         embed = discord.Embed(
             title=f"@{ctx.author.name} pool noodles @{user}!",
             description=f"GET POOL NOODLED <:poolnoodle:1323901818589282377> <:poolnoodle:1323901818589282377> <:poolnoodle:1323901818589282377>",
