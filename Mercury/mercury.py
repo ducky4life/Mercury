@@ -83,8 +83,8 @@ class Mercury(commands.Cog):
             title=f"{ctx.author} pool noodles {user}!",
             description=f"GET POOL NOODLED <:poolnoodle:1323901818589282377> <:poolnoodle:1323901818589282377> <:poolnoodle:1323901818589282377>",
         )
-        await ctx.reply(embed=embed)
-        await embed.add_reaction("<:poolnoodle:1323901818589282377>")
+        msg = await ctx.reply(embed=embed)
+        await msg.add_reaction("<:poolnoodle:1323901818589282377>")
 
     @commands.hybrid_command()
     async def slowmode(self, ctx, seconds: int):
