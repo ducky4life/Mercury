@@ -68,6 +68,10 @@ class Mercury(commands.Cog):
         await ctx.reply("<:shibaheart:1312859566051954830>")
 
     @commands.hybrid_command()
+    async def poolnoodle(self, ctx):
+        await ctx.reply("<:poolnoodle:1323901818589282377>")
+
+    @commands.hybrid_command()
     async def message(self, ctx, user: discord.Member, *, message=None):
         await user.send(
             f"{message}\nSent by {ctx.author.name}, replying will not do anything, this is automated."
@@ -109,14 +113,15 @@ class Mercury(commands.Cog):
 
         match = re.search("nerd", message.content, re.IGNORECASE)
         if match:
+            await message.add_reaction("<:poolnoodle:1323901818589282377>")
             await channel.send("not nerd")
 
         match = re.search("antiweeb", message.content, re.IGNORECASE)
         if match:
+            await message.add_reaction("<:poolnoodle:1323901818589282377>")
             await channel.send("weeb")
 
         match = re.search(r".*pool noodle.*", message.content, re.IGNORECASE)
         if match:
             await message.add_reaction("<:poolnoodle:1323901818589282377>")
             await channel.send("get pool noodled")
-
