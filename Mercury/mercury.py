@@ -68,7 +68,7 @@ class Mercury(commands.Cog):
         await ctx.reply("<:shibaheart:1312859566051954830>")
 
     @commands.hybrid_command()
-    async def poolnoodle(self, ctx):
+    async def noodle(self, ctx):
         await ctx.reply("<:poolnoodle:1323901818589282377>")
 
     @commands.hybrid_command()
@@ -78,7 +78,7 @@ class Mercury(commands.Cog):
         )
 
     @commands.hybrid_command()
-    async def getpoolnoodled(self, ctx, user: discord.Member):
+    async def poolnoodle(self, ctx, user: discord.Member):
         embed = discord.Embed(
             title=f"{ctx.author} pool noodles {user}!",
             description=f"GET POOL NOODLED <:poolnoodle:1323901818589282377> <:poolnoodle:1323901818589282377> <:poolnoodle:1323901818589282377>",
