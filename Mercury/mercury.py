@@ -36,6 +36,10 @@ class Mercury(commands.Cog):
         await ctx.reply(embed=embed)
 
     @commands.hybrid_command()
+    async def gtfts(self, ctx):
+        await ctx.reply(f"{ctx.author.name} initiates sleep protocol")
+
+    @commands.hybrid_command()
     async def areducksgood(self, ctx):
         await ctx.reply("Yes!!")
 
@@ -129,6 +133,11 @@ class Mercury(commands.Cog):
         if match:
             await message.add_reaction("<:poolnoodle:1323901818589282377>")
             await channel.send("weeb")
+
+        match = re.search(".gtfts", message.content, re.IGNORECASE)
+        if match:
+            await message.add_reaction("<:poolnoodle:1323901818589282377>")
+            await channel.send("sleep bad")
 
         match = re.search(r".*pool noodle.*", message.content, re.IGNORECASE)
         if match:
