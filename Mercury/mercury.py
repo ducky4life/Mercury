@@ -83,10 +83,16 @@ class Mercury(commands.Cog):
 
     @commands.hybrid_command()
     async def poolnoodle(self, ctx, user: discord.Member):
-        embed = discord.Embed(
-            title=f"{ctx.author} pool noodles {user}!",
-            description=f"GET POOL NOODLED <:poolnoodle:1323901818589282377> <:poolnoodle:1323901818589282377> <:poolnoodle:1323901818589282377>",
-        )
+        if user == "Mercury#6873":
+            embed = discord.Embed(
+                title=f"{ctx.author} pool noodles {user}!",
+                description=f"test",
+            )
+        else:
+            embed = discord.Embed(
+                title=f"{ctx.author} pool noodles {user}!",
+                description=f"GET POOL NOODLED <:poolnoodle:1323901818589282377> <:poolnoodle:1323901818589282377> <:poolnoodle:1323901818589282377>",
+            )
         msg = await ctx.reply(embed=embed)
         await msg.add_reaction("<:poolnoodle:1323901818589282377>")
 
