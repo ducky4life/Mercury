@@ -83,7 +83,7 @@ class Mercury(commands.Cog):
 
     @commands.hybrid_command()
     async def poolnoodle(self, ctx, user: discord.Member):
-        if user == "Mercury#6873":
+        if user.id == 1306430458309115985:
             embed = discord.Embed(
                 title=f"{ctx.author} pool noodles {user}!",
                 description=f"test",
