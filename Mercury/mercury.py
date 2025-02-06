@@ -132,7 +132,7 @@ class Mercury(commands.Cog):
 
         match = re.search("nerd", message.content, re.IGNORECASE)
         if match:
-            if message.author.id == 429710354931515392 or message.author.id == 691583562608148501:
+            if message.author.id == 429710354931515392:
                 await message.add_reaction("<:poolnoodle:1323901818589282377>")
                 await channel.send("frenzy is nerd")
             else:
