@@ -130,15 +130,6 @@ class Mercury(commands.Cog):
         if match:
             await channel.send(".kickban")
 
-        match = re.search("nerd", message.content, re.IGNORECASE)
-        if match:
-            if message.author.id == 429710354931515392:
-                await message.add_reaction("<:poolnoodle:1323901818589282377>")
-                await channel.send("frenzy is nerd")
-            else:
-                await message.add_reaction("<:poolnoodle:1323901818589282377>")
-                await channel.send("not nerd")
-
         match = re.search("antiweeb", message.content, re.IGNORECASE)
         if match:
             await message.add_reaction("<:poolnoodle:1323901818589282377>")
